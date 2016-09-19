@@ -1,0 +1,365 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+@media screen and (min-width: 0px) and (max-width: $mediaTabletWidth) {
+
+  $deepgreen: rgba(10, 93, 114, 1.00);
+  $centwidth: 1000px;
+  $god: rgba(209, 146, 65, 1.00);
+  $deepred: rgba(231, 86, 84, 1.00);
+
+  #top {
+    width: 100%;
+    height: 125px;
+    background-color: rgba(10, 93, 114, 1.00);
+
+    .top_up {
+      height: 67px;
+
+      .top_up_cent {
+        max-width: $centwidth;
+        width: 100%;
+
+        margin: 0 auto;
+        height: 67px;
+        background-image: url(../img/topbg.png);
+        background-repeat: no-repeat;
+
+        @include clearfix();
+
+        .biglogo {
+          float: left;
+          padding-top: 10px;
+
+          img {
+            width: auto;
+            height : auto;
+            max-height: 100%;
+            max-width: 100%;
+          }
+        }
+
+        .saboxs {
+          display: inline-block;
+          float: right;
+          padding-top: 8px;
+
+          .link01 {
+            display: inline-block;
+            border: 0;
+            width: 46px;
+            height: 52px;
+            background-image: url(../img/icon01.png);
+            background-repeat: no-repeat;
+            cursor: pointer;
+            &:hover {
+              border: 0;
+              background-image: url(../img/icon01_h.png);
+            }
+          }
+          .link02 {
+            display: inline-block;
+            border: 0;
+            width: 46px;
+            height: 52px;
+            background-image: url(../img/icon02.png);
+            background-repeat: no-repeat;
+            cursor: pointer;
+            &:hover {
+              border: 0;
+              background-image: url(../img/icon02_h.png);
+            }
+          }
+        }
+
+      }
+    }
+    .top_down_m {
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      background-color: rgba(10, 93, 114, 1.00);
+
+      &:before {
+        content: "\e900";
+        font-family: 'icomoon', "Roboto", "微軟正黑體", Monaco, "Microsoft JhengHei" ;
+
+        position: absolute;
+        top: 5px;
+        right: 0;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+        font-size: 1em;
+
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      select {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        border: 1px solid rgba(255, 0, 0, 0);
+        height: 55px;
+        background-color: rgba(10, 93, 114, 0);
+        @include border-radius(0);
+
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        padding-left: 5px;
+        font-size: 1em;
+
+        &:focus {
+          outline: 0;
+        }
+          color: rgba(255, 255, 255, 1.00);
+      }
+    }
+
+    .top_down {
+      display: none;
+      border-top: 2px solid white;
+      height: 58px;
+      background-color: rgba(21, 66, 77, 1.00);
+
+      .top_down_cent {
+        position: relative;
+        max-width: $centwidth;
+        width: 100%;
+
+        margin: 0 auto;
+        border: 1px solid rgba(255, 0, 0, .3);
+        background-color: rgba(0, 0, 255, 0.2);
+
+        &:after {
+          content: "\e900";
+          font-family: 'icomoon', "Roboto", "微軟正黑體", Monaco, "Microsoft JhengHei" ;
+
+          position: absolute;
+          top: 5px;
+          right: 0;
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          border: 1px solid rgba(255, 0, 0, .3);
+          color: white;
+
+          cursor: pointer;
+        }
+
+        &.show-menu {
+          > div {
+            display: inline-block;
+          }
+        }
+        > div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: calc(100% - 40px);
+          height: 55px;
+          line-height: 55px - 2px;
+          background-color: rgba(0, 128, 0, 0.2);
+          display: none;
+
+          &.ac {
+            display: inline-block;
+          }
+          a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+    }
+  }
+
+
+
+  #middle {
+    width: 100%;
+    height: 692px;
+    background-color: rgba(220, 209, 209, 1.00);
+
+    .redboxs {
+      height: 647px;
+      background-image: url(../img/imagebg.jpg);
+      background-repeat: repeat-x;
+
+      .middleboxs {
+        width: $centwidth;
+        padding-top: 20px;
+        margin: 0 auto;
+
+        .bannerimg {
+          width: 100%;
+          background-image: url(../img/banner01.png);
+          background-repeat: no-repeat;
+
+          @include clearfix();
+
+          img {
+            display: inline-block;
+            float: left;
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+
+  #pageboxs {
+    width: 100%;
+    padding-bottom: 50px;
+    background-color: rgba(245, 238, 237, 1.00);
+
+    .ptop {
+      width: 100%;
+      height: 60px;
+      background-color: rgba(235, 211, 211, 1.00);
+
+      .ptop_boxs {
+        position: relative;
+        width: $centwidth;
+        margin: 0 auto;
+        height: 60px;
+        background-image: url(../img/papebg.png);
+        background-repeat: no-repeat;
+
+        .pagetitle {
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 60px;
+          height: 175px;
+        }
+
+        @include clearfix();
+
+        > p {
+          display: inline-block;
+          float: left;
+          margin: 0;
+          padding: 0;
+          color: $deepgreen;
+          font-weight: bolder;
+
+          &:after {
+            content: '>';
+            padding: 0 10px;
+          }
+
+          &:last-child {
+            &:after {
+              content: '';
+            }
+          }
+
+          a {
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            color: $deepgreen;
+
+            &:hover {
+              color: $deepred;
+            }
+          }
+
+        }
+
+        &:first-child {
+          padding: 23px 75px;
+        }
+
+      }
+    }
+
+    .psec {
+      width: 100%;
+      height: 75px;
+      background-color: $deepred;
+
+      .psec_boxs {
+        width: $centwidth;
+        margin: 0 auto;
+
+        p {
+          float: left;
+          padding: 28px 75px;
+          margin: 0;
+          color: white;
+          font-size: 1.2em;
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .page_cent_boxs {
+      width: $centwidth;
+      margin: 0 auto;
+      padding: 20px 0 0 75px;
+    }
+
+  }
+
+
+
+  footer {
+    width: 100%;
+    border-bottom: 5px solid $deepgreen;
+
+    .footerboxs {
+        max-width: $centwidth;
+        width: 100%;
+      margin: 0 auto;
+      padding: 20px 0;
+
+      @include clearfix();
+
+      .point {
+        float: left;
+        display: inline-block;
+        background-image: url(../img/liicon.png);
+        background-repeat: no-repeat;
+        background-position: 0 10px;
+        // border: 1px solid rgba(255, 0, 0, .3);
+
+        color: $deepgreen;
+        font-weight: bolder;
+        padding: 10px 0 10px 35px;
+        line-height: 29px;
+
+        @include clearfix();
+        a {
+          display: inline-block;
+          float: right;
+          cursor: pointer;
+          border: 0;
+          padding-right: 25px;
+          img {
+            width: 100%;
+            margin: 0 auto;
+            height: auto;
+            max-width: none;
+          }
+        }
+
+      }
+    }
+  }
+}
