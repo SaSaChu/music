@@ -16,7 +16,7 @@ $(function () {
         subs = subs.concat ($as.map (function () {
             return {
                 href: $(this).attr ('href'),
-                text: $(this).text ()
+                text: ($(this).attr ('title') ? $(this).attr ('title') : '') + $(this).text ()
               };
           }).toArray ());
         return null;
@@ -30,6 +30,7 @@ $(function () {
     }).filter (function (t) { return t != null; }).toArray ();
 
     arr = arr.concat (subs);
+console.log (arr);
 
     $('<div />').addClass ('top_down_m').append (
       $('<select / >').append (arr.map (function (t) {
