@@ -78,6 +78,7 @@
 
       }
     }
+
     .top_down_m {
       display: inline-block;
       width: 100%;
@@ -189,16 +190,15 @@
 
   #middle {
     width: 100%;
-    height: 692px;
     background-color: rgba(220, 209, 209, 1.00);
 
     .redboxs {
-      height: 647px;
       background-image: url(../img/imagebg.jpg);
       background-repeat: repeat-x;
 
       .middleboxs {
-        width: $centwidth;
+        max-width: $centwidth;
+        width: 100%;
         padding-top: 20px;
         margin: 0 auto;
 
@@ -210,9 +210,10 @@
           @include clearfix();
 
           img {
-            display: inline-block;
-            float: left;
+            display: block;
+            width: 100%;
           }
+
 
         }
       }

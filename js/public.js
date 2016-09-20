@@ -30,7 +30,6 @@ $(function () {
     }).filter (function (t) { return t != null; }).toArray ();
 
     arr = arr.concat (subs);
-console.log (arr);
 
     $('<div />').addClass ('top_down_m').append (
       $('<select / >').append (arr.map (function (t) {
@@ -39,4 +38,28 @@ $(function () {
         if ($(this).val ()) window.location = $(this).val ();
       })).insertBefore ($('.top_down'));
   }
+
+
+  // news 上下拉
+  $('.page_cent_boxs .news_title').click (function () {
+    $('.page_cent_boxs .news_title.open').not ($(this)).removeClass ('open');
+    $(this).toggleClass ('open');
+  });
+
+
+  // 圖自動縮放
+   $('.pic_box_3, .pic_box_1, .page_pic_box_3, page_pic_box_1').imgLiquid ({verticalAlign: 'center'});
+
+
+  // page點選切換tab
+   $('.name').click(function() {
+    $('.name').removeClass ('nc');
+    $(this).addClass ('nc');
+
+    $('.team_type_boxs').removeClass('team_type_boxs_show');
+    $('.team_type_boxs').eq($(this).index()).addClass('team_type_boxs_show');
+   });
+
+   $('.name').eq (0).click();
+
 });

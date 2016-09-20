@@ -127,9 +127,11 @@ html {
 
       }
     }
+
     .top_down_m {
       display: none;
     }
+
     .top_down {
       border-top: 2px solid white;
       height: 58px;
@@ -163,6 +165,7 @@ html {
 
           &.sub {
             position: relative;
+            font-size: .9em;
 
             a:nth-child(n+2) {
               display: none;
@@ -177,7 +180,7 @@ html {
                   border: 1px solid rgba(10, 93, 114, 00);
                 }
                 &:nth-child(n+3) {
-                  border-top: 1px solid rgba(255, 255, 255, 1);
+                  border-top: 1px solid $god;
                 }
                 @for $i from 2 through 10 {
                   &:nth-child(#{$i}) {
@@ -205,7 +208,7 @@ html {
 
             border-top: 2px solid white;
             margin-top: -2px;
-            padding: 18px 0;
+            padding: 19px 0;
 
 
 

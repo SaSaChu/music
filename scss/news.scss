@@ -57,12 +57,17 @@ html {
 
  .page_cent_boxs {
   // page_cent_boxs 設定在public
+  .content {
+    display: none;
+  }
   .news_title {
+    position: relative;
     display: inline-block;
     width: 100%;
     border-bottom: 1px solid $deepgreen;
     border-top: 1px solid $deepgreen;
     padding: 10px 0 10px 40px;
+    margin: 8px 0 3px 0;
 
     background-color: rgba(255, 255, 255, .5);
     background-image: url(../img/liicon.png);
@@ -82,6 +87,72 @@ html {
     }
 
 
+    &:after {
+      content: "\e900";
+      font-family: 'icomoon', "Roboto", "微軟正黑體", Monaco, "Microsoft JhengHei" ;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      color: rgba(21, 66, 77, 1.00);
+
+      cursor: pointer;
+      text-align: center;
+    }
+
+    &.open {
+      &:after {
+        content: "\e901";
+      }
+      + .content {
+        display: inline-block;
+        width: 100%;
+        padding: 15px 40px;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        p {
+          margin: 0;
+          padding: 0;
+          text-align: left;
+          color: $deepgreen;
+          font-size: 1em;
+          font-weight: bolder;
+          line-height: 1.4em;
+        }
+
+        @include clearfix();
+
+        .pic_box_3 {
+          float: left;
+          margin-top: 15px;
+          width: calc(100% / 3 - 15px);
+          margin-right: 5px;
+          height: 195px;
+
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        .pic_box_1 {
+          display: inline-block;
+          margin-top: 15px;
+          width: 100%;
+          height: 195px;
+
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+      }
+    }
   }
 
  }
