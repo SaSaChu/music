@@ -48,7 +48,7 @@ $(function () {
 
 
   // 圖自動縮放
-   $('.pic_box_3, .pic_box_1, .page_pic_box_3, page_pic_box_1').imgLiquid ({verticalAlign: 'center'});
+   $('.pic_box_3, .pic_box_1, .page_pic_box_3, .page_pic_box_1').imgLiquid ({verticalAlign: 'center'});
 
 
   // page點選切換tab

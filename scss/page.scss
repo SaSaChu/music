@@ -132,7 +132,7 @@ html {
   .team_type_boxs {
     display: none;
 
-    &.team_type_boxs_show{
+    &.team_type_boxs_show {
       display: inline-block;
     }
 
@@ -142,59 +142,58 @@ html {
       border-top: 1px solid $god;
       border-bottom: 1px solid $god;
 
-    p {
-      margin: 0;
-      text-align: left;
-      font-size: 1.2em;
-      font-weight: bolder;
-      color: $deepgreen;
-    }
-  }
-
-  .page_pic_boxs {
-    width: 100%;
-    border-bottom: 1px solid $god;
-    padding: 15px 30px 15px 40px;
-
-    @include clearfix();
-
-    .page_pic_box_3 {
-      float: left;
-      width: calc(100% / 3 - 10px);
-      margin-right: 5px;
-      height: 200px;
-
-      img {
-        max-width: 100%;
-        height: auto;
+      p {
+        margin: 0;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: bolder;
+        color: $deepgreen;
       }
     }
 
-    .page_pic_box_1 {
-      float: left;
-      margin-top: 15px;
+    .page_pic_boxs {
       width: 100%;
-      margin-right: 5px;
-      height: 200px;
+      border-bottom: 1px solid $god;
+      padding: 15px 30px 15px 40px;
 
-      img {
-        max-width: 100%;
-        height: auto;
+      @include clearfix();
+
+      .page_pic_box_3 {
+        float: left;
+        width: calc(100% / 3 - 10px);
+        margin-right: 5px;
+        height: 200px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      .page_pic_box_1 {
+        float: left;
+        margin-top: 15px;
+        width: 100%;
+        margin-right: 5px;
+        height: 200px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      p {
+        float: left;
+        margin: 0;
+        padding-top: 20px;
+        text-align: left;
+        color: $deepgreen;
+        font-size: 1em;
+        font-weight: bolder;
+        line-height: 1.6em;
       }
     }
-
-    p {
-      float: left;
-      margin: 0;
-      padding-top: 20px;
-      text-align: left;
-      color: $deepgreen;
-      font-size: 1em;
-      font-weight: bolder;
-      line-height: 1.6em;
-    }
-
-  }
 
   }
 
