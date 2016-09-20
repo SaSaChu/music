@@ -132,7 +132,7 @@ html {
   .team_type_boxs {
     display: none;
 
-    &.team_type_boxs_show {
+    &.show {
       display: inline-block;
     }
 
@@ -142,12 +142,26 @@ html {
       border-top: 1px solid $god;
       border-bottom: 1px solid $god;
 
+      @include clearfix();
+
       p {
+        float: left;
         margin: 0;
         text-align: left;
         font-size: 1.2em;
         font-weight: bolder;
         color: $deepgreen;
+      }
+
+      .mapgod {
+        float: left;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: bolder;
+        color: $god;
+        padding-right: 10px;
       }
     }
 

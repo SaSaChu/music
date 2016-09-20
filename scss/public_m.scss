@@ -17,8 +17,10 @@
     height: 125px;
     background-color: rgba(10, 93, 114, 1.00);
 
+    padding: 10px 10px;
+
     .top_up {
-      height: 67px;
+      height: 0;
 
       .top_up_cent {
         max-width: $centwidth;
@@ -32,13 +34,13 @@
         @include clearfix();
 
         .biglogo {
+          width: 60%;
           float: left;
-          padding-top: 10px;
+          height: 35px;
+          margin-top: 20px;
 
           img {
-            width: auto;
             height : auto;
-            max-height: 100%;
             max-width: 100%;
           }
         }
@@ -51,10 +53,14 @@
           .link01 {
             display: inline-block;
             border: 0;
-            width: 46px;
-            height: 52px;
+            width: 35px;
+            height: 40px;
             background-image: url(../img/icon01.png);
             background-repeat: no-repeat;
+
+            -moz-background-size: cover;
+            background-size: cover;
+
             cursor: pointer;
             &:hover {
               border: 0;
@@ -64,9 +70,13 @@
           .link02 {
             display: inline-block;
             border: 0;
-            width: 46px;
-            height: 52px;
+            width: 35px;
+            height: 40px;
             background-image: url(../img/icon02.png);
+
+            -moz-background-size: cover;
+            background-size: cover;
+
             background-repeat: no-repeat;
             cursor: pointer;
             &:hover {
@@ -193,13 +203,13 @@
     background-color: rgba(220, 209, 209, 1.00);
 
     .redboxs {
-      background-image: url(../img/imagebg.jpg);
-      background-repeat: repeat-x;
+      padding: 10px 10px;
+      background-color:$deepred;
 
       .middleboxs {
         max-width: $centwidth;
         width: 100%;
-        padding-top: 20px;
+        padding-top: 0;
         margin: 0 auto;
 
         .bannerimg {
@@ -210,6 +220,7 @@
           @include clearfix();
 
           img {
+            margin-top: 10px;
             display: block;
             width: 100%;
           }
@@ -235,7 +246,8 @@
 
       .ptop_boxs {
         position: relative;
-        width: $centwidth;
+        max-width: $centwidth;
+        width: 100%;
         margin: 0 auto;
         height: 60px;
         background-image: url(../img/papebg.png);
@@ -311,9 +323,10 @@
     }
 
     .page_cent_boxs {
-      width: $centwidth;
+      max-width: $centwidth;
+      width: 100%;
       margin: 0 auto;
-      padding: 20px 0 0 75px;
+      padding-top: 55px;
     }
 
   }
@@ -325,14 +338,16 @@
     border-bottom: 5px solid $deepgreen;
 
     .footerboxs {
-        max-width: $centwidth;
-        width: 100%;
+      max-width: $centwidth;
+      width: 100%;
       margin: 0 auto;
-      padding: 20px 0;
+      padding: 20px 10px;
 
       @include clearfix();
 
       .point {
+        display: inline-block;
+        width: 100%;
         float: left;
         display: inline-block;
         background-image: url(../img/liicon.png);
@@ -340,17 +355,24 @@
         background-position: 0 10px;
         // border: 1px solid rgba(255, 0, 0, .3);
 
-        color: $deepgreen;
-        font-weight: bolder;
-        padding: 10px 0 10px 35px;
-        line-height: 29px;
-
         @include clearfix();
+
+        p {
+          float: left;
+          padding: 0;
+          margin-top: 0;
+          color: $deepgreen;
+          font-weight: bolder;
+          padding: 10px 0 10px 35px;
+          line-height: 25px;
+        }
+
         a {
           display: inline-block;
-          float: right;
+          float: left;
           cursor: pointer;
           border: 0;
+          padding: 10px 0;
           padding-right: 25px;
           img {
             width: 100%;

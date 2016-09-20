@@ -49,7 +49,7 @@ html {
 }
 
 
-@media screen and (min-width: $mediaTabletWidth + 1) {
+@media screen and (min-width: 0px) and (max-width: $mediaTabletWidth) {
 
  $deepgreen: rgba(10, 93, 114, 1.00);
  $centwidth: 1000px;
@@ -64,7 +64,7 @@ html {
   .news_title {
     position: relative;
     display: inline-block;
-    width: 100%;
+    width: 95%;
     border-bottom: 1px solid $deepgreen;
     border-top: 1px solid $deepgreen;
     padding: 10px 0 10px 40px;
@@ -95,7 +95,7 @@ html {
       position: absolute;
       top: 0;
       right: 0;
-      display: inline-block;
+      display: none;
       width: 40px;
       height: 40px;
       line-height: 40px;
@@ -111,8 +111,8 @@ html {
       }
       + .content {
         display: inline-block;
-        width: 100%;
-        padding: 15px 40px;
+        width: 95%;
+        padding: 15px 10px;
         background-color: rgba(255, 255, 255, 0.5);
 
         p {
@@ -130,7 +130,7 @@ html {
         .pic_box_3 {
           float: left;
           margin-top: 15px;
-          width: calc(100% / 3 - 15px);
+          width: 100%;
           margin-right: 5px;
           height: 195px;
 
