@@ -57,7 +57,7 @@ $(function () {
     $(this).addClass ('nc');
 
     $('.team_type_boxs').removeClass('show');
-    $('.team_type_boxs').eq($(this).index()).addClass('show');
+    $('.team_type_boxs').eq($(this).parent().index()).addClass('show');
    });
 
    $('.name').eq (0).click();
