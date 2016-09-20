@@ -49,6 +49,7 @@ html {
 }
 
 
+@media screen and (min-width: 0px) and (max-width: $mediaTabletWidth) {
 
  $deepgreen: rgba(10, 93, 114, 1.00);
  $centwidth: 1000px;
@@ -58,16 +59,20 @@ html {
  .page_cent_boxs {
   // page_cent_boxs 設定在public
   .de_boxs {
+    display: inline-block;
     width: 100%;
     background-image: url(../img/liicon.png);
     background-repeat: no-repeat;
     background-position: 5px 5px;
 
+    padding: 0 10px;
 
-    @include split-left(14%, '.type_left', '.type_right');
+
+    // @include split-left(14%, '.type_left', '.type_right');
 
     .type_left {
-      padding: 10px 0 10px 40px;
+      width: 100%;
+      padding: 10px 0 10px 30px;
       color: $deepgreen;
       text-align: left;
       font-weight: bolder;
@@ -75,12 +80,13 @@ html {
     }
 
     .type_right {
-      padding: 11px 0;
+      width: 100%;
       color: $deepgreen;
       text-align: left;
       font-weight: bolder;
       font-size: .9em;
       line-height: 1.5em;
+      padding: 0 0 10px 30px;
     }
 
   }
@@ -175,9 +181,10 @@ html {
 
       .page_pic_box_3 {
         float: left;
-        width: calc(100% / 3 - 10px);
+        width: 100%;
         margin-right: 5px;
         height: 200px;
+        margin: 10px 0;
 
         img {
           max-width: 100%;
@@ -213,7 +220,7 @@ html {
     .mapboxs {
       width: 100%;
       border-bottom: 1px solid $god;
-      padding: 15px 30px 15px 40px;
+      padding: 8px;
 
       .mapp {
         width: 100%;
@@ -221,9 +228,10 @@ html {
         background-repeat: no-repeat;
         background-position: 5px 5px;
 
-        @include split-left(15%, '.map_left', '.map_right');
+        // @include split-left(15%, '.map_left', '.map_right');
 
         .map_left, .allmap {
+          width: 100%;
           padding: 10px 0 10px 40px;
           color: $deepgreen;
           text-align: left;
@@ -232,11 +240,12 @@ html {
         }
 
         .map_right {
-          padding: 11px 0;
+          width: 100%;
+          padding: 0 0 10px 40px;
           color: $deepgreen;
           text-align: left;
           font-weight: bolder;
-          font-size: .9em;
+          font-size: 1em;
           line-height: 1.5em;
         }
 
@@ -288,7 +297,7 @@ html {
 
  }
 
-
+}
 
 
 
