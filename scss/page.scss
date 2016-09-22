@@ -81,6 +81,16 @@ html {
       font-weight: bolder;
       font-size: .9em;
       line-height: 1.5em;
+
+      a {
+        color: $deepred;
+        text-decoration: none;
+        font-weight: bolder;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
   }

@@ -1,0 +1,151 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+$deepgreen: rgba(10, 93, 114, 1.00);
+$centwidth: 1000px;
+$god: rgba(209, 146, 65, 1.00);
+$deepred: rgba(231, 86, 84, 1.00);
+
+
+@media screen and (min-width: 0px) and (max-width: $mediaTabletWidth) {
+
+  .table {
+    display: block;
+    margin-top: 20px;
+
+    .tr {
+      display: block;
+      margin: 10px;
+      color: black;
+      background-color: rgba(237, 242, 235, 1.00);
+
+      &:nth-child(2n + 1) {
+        background-color: rgba(216, 228, 211, 1.00);
+      }
+
+
+      .td {
+        display: block;
+        border: 1px solid rgba(255, 255, 255, .5);
+        text-align: left;
+
+        p {
+          display: inline-block;
+          padding: 0;
+          margin: 15px 0 ;
+
+
+          a {
+            cursor: pointer;
+            color: $deepred;
+            text-decoration: none;
+            font-weight: bolder;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        &:before {
+          content: attr(title);
+          display: inline-block;
+          width: 100px;
+
+          padding: 13px 0;
+          background-color: $deepgreen;
+
+          color: white;
+          font-size: 1em;
+          font-weight: bolder;
+
+          text-align: center;
+          border-top: 2px solid $god;
+          border-bottom: 2px solid $god;
+
+          margin-right: 10px;
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mediaTabletWidth + 1) {
+  .table {
+    display: table;
+    width: 100%;
+    margin-top: 20px;
+
+    .tr {
+      display: table-row;
+      @include clearfix();
+
+      color: black;
+      background-color: rgba(237, 242, 235, 1.00);
+
+
+      &:nth-child(2n + 1) {
+        background-color: rgba(216, 228, 211, 1.00);
+      }
+
+      .td {
+        display: table-cell;
+        border: 1px solid rgba(255, 255, 255, .5);
+        padding: 15px 0;
+
+        p {
+          padding: 10px 10px;
+          margin: 0;
+
+          a {
+            cursor: pointer;
+            color: $deepred;
+            text-decoration: none;
+            font-weight: bolder;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      &:first-child { // 第一行的 tr
+
+        .td {
+          position: relative;
+
+          p {
+            padding: 0;
+            margin: 65px 0 13px 0;
+          }
+
+          &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            content: attr(title);
+            display: inline-block;
+            width: 100%;
+
+            padding: 13px 0;
+            background-color: $deepgreen;
+
+            color: white;
+            font-size: 1.2em;
+            font-weight: bolder;
+
+            border-top: 2px solid $god;
+            border-bottom: 2px solid $god;
+          }
+        }
+      }
+    }
+  }
+}
