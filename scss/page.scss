@@ -185,9 +185,10 @@ html {
 
       .page_pic_box_3 {
         float: left;
-        width: calc(100% / 3 - 10px);
-        margin-right: 5px;
+        width: calc(100% / 3 - 21px / 3);
         height: 200px;
+        margin-top: 10px;
+        margin-right: 7px;
 
         img {
           max-width: 100%;
@@ -200,7 +201,7 @@ html {
         margin-top: 15px;
         width: 100%;
         margin-right: 5px;
-        height: 200px;
+        height: 450px;
 
         img {
           max-width: 100%;
